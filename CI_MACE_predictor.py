@@ -1,17 +1,17 @@
 import streamlit as st
-import joblib
+#import joblib
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
 
 # 添加错误处理避免加载失败
-try:
-    model = joblib.load('cph.pkl')
-    model_loaded = True
-except:
-    model_loaded = False
-    st.warning("Model file not found. Risk scores will be calculated using the scoring system only.")
+#try:
+    #model = joblib.load('cph.pkl')
+    #model_loaded = True
+#except:
+    #model_loaded = False
+    #st.warning("Model file not found. Risk scores will be calculated using the scoring system only.")
 
 
 # Streamlit UI
