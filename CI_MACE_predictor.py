@@ -141,25 +141,14 @@ def display_risk_results(risk_score, risk_group, risk_probs):
     })
     
     # 自定义表格样式以匹配图片
-    with st.container():
     st.dataframe(
         prob_table,
         hide_index=True,
         column_config={
-            "3-year": st.column_config.TextColumn(
-                "3-year",
-                width="large",      # 改为大尺寸
-                disabled=True       # 禁用编辑
-            ),
-            "5-year": st.column_config.TextColumn(
-                "5-year",
-                width="large",
-                disabled=True
-            )
+            "3-year": st.column_config.TextColumn("3-year", width="medium"),
+            "5-year": st.column_config.TextColumn("5-year", width="medium")
         },
-        height=120,                 # 固定高度
-        width=500,                  # 固定宽度
-        use_container_width=False    # 不使用容器宽度
+        use_container_width=True
     )
     
 def create_clinical_waterfall(score_details):
