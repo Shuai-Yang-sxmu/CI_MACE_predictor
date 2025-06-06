@@ -124,7 +124,7 @@ def display_risk_results(risk_score, risk_group, risk_probs):
         <div style="
             margin-bottom: 5px;
             font-family: Arial, sans-serif;
-            font-size: 16px;
+            font-size: 18px;
             text-align: center;
             font-weight: bold;
         ">
