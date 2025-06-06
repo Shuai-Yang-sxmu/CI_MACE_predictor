@@ -148,8 +148,8 @@ def display_risk_results(risk_score, risk_group, risk_probs):
             "3-year": st.column_config.TextColumn("3-year", width="medium"),
             "5-year": st.column_config.TextColumn("5-year", width="medium")
         },
-        width=600,        # 加大整体宽度
-        height=150,        # 固定高度避免跳动
+        width=700,        # 加大整体宽度
+        height=50,        # 固定高度避免跳动
         use_container_width=False
     )
     
