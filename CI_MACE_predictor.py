@@ -195,23 +195,6 @@ if st.button("Calculate Risk"):
     # 显示结果
     display_risk_results(risk_score, risk_group, risk_probs)
 
-    # 添加临床建议
-    if risk_group == "Low-risk group":
-        st.markdown("""
-        **Clinical Recommendation:**
-        Low risk of MACE. Consider standard follow-up according to guidelines.
-        """)
-    elif risk_group == "Moderate-risk group":
-        st.markdown("""
-        **Clinical Recommendation:**
-        Moderate risk of MACE. Consider more frequent follow-up and risk factor management.
-        """)
-    else:  # High-risk
-        st.markdown("""
-        **Clinical Recommendation:**
-        High risk of MACE. Consider aggressive risk factor modification and potential revascularization evaluation.
-        """)
-
 
     # 创建风险分解瀑布图数据
     score_details = [
