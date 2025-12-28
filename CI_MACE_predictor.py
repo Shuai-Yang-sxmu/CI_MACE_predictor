@@ -10,7 +10,6 @@ warnings.filterwarnings('ignore')
 # ==================== 页面配置 ====================
 st.set_page_config(
     page_title="MACE Risk Predictor for Chronotropic Incompetence",
-    page_icon="🫀",
     layout="wide"
 )
 
@@ -380,4 +379,5 @@ st.markdown("""
     <p>⚠️ <i>This tool is for research purposes only. Clinical decisions should be made in consultation with qualified healthcare professionals.</i></p>
     <p>© 2026 | Developed for: <i>Development and external validation of an interpretable machine learning model for risk stratification of patients with chronotropic incompetence undergoing exercise stress SPECT-MPI</i></p>
 </div>
+
 """, unsafe_allow_html=True)
