@@ -185,9 +185,8 @@ st.sidebar.markdown("---")
 predict_button = st.sidebar.button("Calculate Risk", type="primary", use_container_width=True)
 
 # ==================== 主区域：标题 ====================
-st.markdown('<h1 class="main-title">MACE Risk Predictor for Chronotropic Incompetence</h1>', unsafe_allow_html=True)
-st.markdown('<p class="sub-title">An interpretable machine learning tool for stratifying cardiovascular risk in patients with chronotropic incompetence undergoing exercise stress SPECT-MPI.</p>', unsafe_allow_html=True)
-st.markdown('<p class="research-note">Designed for Research Verification & Educational Purposes</p>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">MACE Risk Stratification for Chronotropic Incompetence</h1>', unsafe_allow_html=True)
+st.markdown('<p class="sub-title">An explainable machine learning model developed and externally validated for predicting MACE in patients with chronotropic incompetence undergoing exercise stress SPECT-MPI.</p>', unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -393,7 +392,7 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #6B7280; font-size: 0.9rem; padding: 1rem 0; line-height: 1.7;">
     <p style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.8rem; color: #374151;">
-        Research Prototype | Not for Clinical Decision Making
+        Investigational Decision Support Tool | For Research Use Only
     </p>
     <p style="margin: 1rem auto; padding: 0 1rem; max-width: 900px; text-align: justify;">
         ⚠️ <b>DISCLAIMER:</b> This tool is a <b>research prototype</b> developed to demonstrate the application of 
@@ -404,9 +403,9 @@ st.markdown("""
         qualified healthcare professionals based on comprehensive clinical evaluation.
     </p>
     <p style="font-size: 0.85rem; color: #9CA3AF; margin-top: 1rem;">
-        © 2025 | Developed for: <i>Development and external validation of an interpretable machine learning model 
-        for risk stratification of patients with chronotropic incompetence undergoing exercise stress SPECT-MPI: 
-        A multicenter retrospective study</i>
+        © 2026 | Developed for: <i>Development and external validation of an explainable machine learning model for
+        risk stratification of patients with chronotropic incompetence undergoing exercise stress SPECT-MPI: a dual-center study</i>
     </p>
 </div>
+
 """, unsafe_allow_html=True)
