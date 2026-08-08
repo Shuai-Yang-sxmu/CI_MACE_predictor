@@ -1,0 +1,54 @@
+{
+  "deployment_name": "CI MACE Predictor",
+  "algorithm": "XGBoost survival:cox",
+  "endpoint": "Major adverse cardiovascular events (MACE)",
+  "derivation_n": 765,
+  "derivation_events": 114,
+  "external_validation_n": 295,
+  "features": [
+    "Dyslipidaemia",
+    "Diabetes",
+    "SMS",
+    "TPD",
+    "HRR3"
+  ],
+  "risk_score_definition": "XGBoost output margin (raw log-relative-hazard score); larger values indicate greater hazard",
+  "risk_group_cutpoints": {
+    "low_to_medium": -0.480128855,
+    "medium_to_high": 1.042557597
+  },
+  "prediction_horizons_months": [36.0, 60.0],
+  "absolute_risk_method": "S(t|x) = exp[-H0(t) * exp(eta)], using the frozen weighted Breslow cumulative baseline hazard estimated in the complete 765-patient derivation cohort",
+  "preprocessing": {
+    "Dyslipidaemia": {
+      "type": "binary",
+      "allowed_values": [0, 1]
+    },
+    "Diabetes": {
+      "type": "binary",
+      "allowed_values": [0, 1]
+    },
+    "SMS": {
+      "type": "continuous",
+      "outlier_exempt_in_final_preprocessing": true,
+      "derivation_observed_range": [0.0, 19.0]
+    },
+    "TPD": {
+      "type": "continuous",
+      "outlier_exempt_in_final_preprocessing": true,
+      "derivation_observed_range": [0.0, 18.0]
+    },
+    "HRR3": {
+      "type": "continuous",
+      "winsorize_lower": 14.27815712643661,
+      "winsorize_upper": 70.33883633761567,
+      "derivation_export_range": [14.0, 70.0]
+    }
+  },
+  "model_artifact": "final_xgb_model.json",
+  "model_sha256": "257c242ff5db8447836b36f0f94f93016f0014b7d1a52dbf03cf5d07d90173a2",
+  "baseline_artifact": "final_xgb_breslow_baseline.csv",
+  "baseline_sha256": "624c416a8e20e5286fc7bdc9d30c27b9308053ac376e5ab013131c9c0d5efcc2",
+  "xgboost_version": "3.2.0",
+  "final_seed": 13438258
+}
